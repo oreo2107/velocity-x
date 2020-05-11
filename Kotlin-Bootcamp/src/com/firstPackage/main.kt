@@ -2,9 +2,7 @@
 package com.firstPackage
 
 fun buildAquarium() {
-    val aquarium = Aquarium(numberOfFish = 29)
-    aquarium.printSize()
-    aquarium.volume = 70
+    val aquarium = Aquarium(length = 25, width = 25, height = 40)
     aquarium.printSize()
 }
 

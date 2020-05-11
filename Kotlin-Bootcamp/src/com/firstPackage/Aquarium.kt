@@ -1,13 +1,15 @@
 package com.firstPackage
 
-class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40){
+open class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40){
     init {
         println("Aquarium initializing")
     }
-    var volume: Int
+    open val shape = "Rectangle"
+    open var water: Double = 0.0
+    get() = volume * 0.9
+    open var volume: Int
     get() = width*height*length/1000
-    //private getter allows only reading of data outside the file
-    private set(value){
+    set(value){
         height = (value * 1000) / (width * length)
     }
     constructor(numberOfFish: Int): this(){
@@ -17,10 +19,13 @@ class Aquarium(var length: Int = 100, var width: Int = 20, var height: Int = 40)
         height = (tank / (length * width)).toInt()
     }
     fun printSize(){
+        //printing dimensions
         println("Width: $width cm " +
                 "Height: $height cm " +
-                "Length: $length cm " +
-                "Volume: $volume l\n"
+                "Length: $length cm "
                 )
+        //printing volume of water in Tank
+        println("Volume: $volume l\n" +
+                "Water: $water l (${water/volume*100.0}% full)")
     }
 }
