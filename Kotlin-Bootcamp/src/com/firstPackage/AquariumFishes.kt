@@ -2,18 +2,21 @@ package com.firstPackage
 interface FishAction{
     fun eat()
 }
-abstract class AquariumFishes {
-    abstract val color: String
+interface FishColor{
+    var color: String
 }
-class Shark: AquariumFishes(),FishAction{
-    override val color = "grey"
+class Shark: FishColor,FishAction{
+    override var color = "grey"
     override fun eat() {
         println("hunt and eat fish")
     }
 }
-class Plecostomus: AquariumFishes(),FishAction{
-    override val color = "gold"
+//interface delegation by overriding a specific property using object
+class Plecostomus: FishColor by GoldColor,FishAction{
     override fun eat() {
         println("eat algae")
     }
+}
+object GoldColor: FishColor {
+    override var color = "gold"
 }
