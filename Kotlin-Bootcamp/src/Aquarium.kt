@@ -1,7 +1,13 @@
 import java.util.* //required import
+
 fun main(args:Array<String>){
+    val decorations = listOf("rock", "pagoda", "plastic plant", "alligator", "flowerpot")
+    //eager creates the new list of filtered elements
+    val eager = decorations.filter { it[0] == 'p' }
+    println("eager:" + eager)
     feedTheFish()
 }
+
 fun feedTheFish(){
     val day = randomDay()
     val food = fishFood(day)
