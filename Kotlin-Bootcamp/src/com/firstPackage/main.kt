@@ -4,7 +4,8 @@ package com.firstPackage
 fun buildAquarium() {
     val aquarium = Aquarium(numberOfFish = 29)
     aquarium.printSize()
-    println("Volume: ${aquarium.width * aquarium.length * aquarium.height / 1000} l")
+    aquarium.volume = 70
+    aquarium.printSize()
 }
 
 fun main() {
