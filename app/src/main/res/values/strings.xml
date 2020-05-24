@@ -1,5 +1,16 @@
 <resources>
-    <string name="app_name">DiceRoller</string>
-    <string name="roll_label">Let\'s Roll</string>
-    <string name="rolled">Dice Rolled</string>
+    <string name="app_name">About Me</string>
+    <string name="name">Om Mishra</string>
+    <string name="yellow_star">Yellow Star</string>
+    <string name="bio_text">I\'m Om Mishra.
+    \n Pursuing my Bachelor\'s of Engineering from
+        \n LDRP Institute of Technology and Research, Gandhinagar.
+        \n I have worked upon projects:
+        \n1) Constellation Trivia
+        \n2) We Serve
+        \n3) X-ARPG
+        \n4) X-CNF
+        \n
+        \nX-CNF is my most successful project until now.
+    </string>
 </resources>
